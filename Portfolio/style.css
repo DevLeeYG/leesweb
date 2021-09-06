@@ -26,6 +26,13 @@ ul {
   padding-left: 0;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /*Nav bar*/
 #navbar {
   display: flex;
@@ -56,4 +63,26 @@ ul {
 
 .navbar__munu__item:hover {
   background-color: #dfe6e9;
+}
+
+#home {
+  background: url("/imgs/Lavishette.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: rgba(53, 59, 72, 1);
+}
+
+.home__contact {
+  font-size: inherit;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: 2px solid black;
+  border-radius: 6%;
 }
