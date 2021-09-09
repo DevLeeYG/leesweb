@@ -91,9 +91,11 @@ button {
   padding: 50px;
   text-align: center;
   margin: auto;
-  max-width: 1200px;
 }
-
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
 /* about*/
 
 .about__majors {
@@ -117,7 +119,7 @@ button {
 
 .major__icon :hover {
   color: #fd79a8;
-  transform: rotate(-30deg) scale(1.1);
+  transform: rotate(-360deg) scale(1.1);
 }
 
 .major__icon i {
@@ -130,4 +132,38 @@ button {
 }
 .job__description {
   text-align: left;
+}
+hr {
+  margin-top: 50px;
+}
+
+/* skilles */
+#skills {
+  background-color: blanchedalmond;
+  padding-top: 30px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  padding: 20px;
+  background-color: darkseagreen;
+}
+
+.skill__bar {
+  height: 5px;
+  background-color: dimgray;
+}
+
+.skill {
+  margin-bottom: 30px;
+}
+.skill__value {
+  width: 100%;
+  height: 3px;
+  background-color: dodgerblue;
 }
