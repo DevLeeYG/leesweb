@@ -167,3 +167,41 @@ hr {
   height: 3px;
   background-color: dodgerblue;
 }
+
+/*Work*/
+.work__categrois {
+  margin: 40px;
+}
+.category__btn {
+  border: 1px solid black;
+  border-radius: initial;
+  font-size: medium;
+  padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: pink;
+  color: white;
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__count {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: 300ms;
+}
