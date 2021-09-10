@@ -6,7 +6,7 @@ const navbarMenu = document.querySelector(".navbar__menu");
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 const arrowup = document.querySelector(".Arrow__up ");
-
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 //navbar
 
 document.addEventListener("scroll", () => {
@@ -15,6 +15,12 @@ document.addEventListener("scroll", () => {
   } else {
     navbar.classList.remove("navbar--dark");
   }
+});
+
+//navbar toggle
+
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 //handle scroll
