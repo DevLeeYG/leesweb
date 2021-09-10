@@ -1,14 +1,42 @@
-/* Global*/
-
+/* Global */
 :root {
-  /*color*/
-  --color-white: ;
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-black: #4d4d4d;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
 
-  /*Font size*/
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
 
-  /*Font weight */
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
 
-  /*Size*/
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Annimation */
+  --animation-duration: 300ms;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -35,12 +63,20 @@ button {
 
 /*Nav bar*/
 #navbar {
+  position: fixed; /*항상고정*/
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #00cec9;
+
   align-items: center;
   color: white;
   padding: 16px;
+}
+
+#navbar.navbar--dark {
+  background-color: #81ecec;
+  padding: 8px;
+  transition: 300ms ease-in-out;
 }
 
 .navbar__menu {
@@ -68,6 +104,7 @@ button {
 #home {
   background: url("/imgs/Lavishette.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
