@@ -1,7 +1,7 @@
 "use strict";
 //navbar
 const navbar = document.querySelector("#navbar");
-const navbarHeight = navbar.getBoundingClientRect().height;
+const navbarHeight = navbar.getBoundingClientRect().height; //세로길이
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--dark");
@@ -25,6 +25,13 @@ navbar.addEventListener("click", (event) => {
 
 homeContactButton.addEventListener("click", (event) => {
   scrollIntoView("#contact");
+});
+
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight; // 위로올라가면 1 밑으로 내려가면 0
 });
 
 function scrollIntoView(selector) {
