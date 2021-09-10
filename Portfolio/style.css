@@ -307,3 +307,18 @@ hr {
     height: 80px;
   }
 }
+
+/*arrowup*/
+.Arrow__up {
+  position: fixed;
+  bottom: 50px;
+  font-size: 30px;
+  right: 50px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+.Arrow__up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}

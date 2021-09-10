@@ -1,7 +1,14 @@
 "use strict";
-//navbar
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height; //세로길이
+const homeContactButton = document.querySelector(".home__contact");
+const navbarMenu = document.querySelector(".navbar__menu");
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+const arrowup = document.querySelector(".Arrow__up ");
+
+//navbar
+
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--dark");
@@ -11,8 +18,12 @@ document.addEventListener("scroll", () => {
 });
 
 //handle scroll
-const homeContactButton = document.querySelector(".home__contact");
-const navbarMenu = document.querySelector(".navbar__menu");
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
+
 navbar.addEventListener("click", (event) => {
   const target = event.target;
   const link = target.dataset.link;
@@ -26,15 +37,22 @@ navbar.addEventListener("click", (event) => {
 homeContactButton.addEventListener("click", (event) => {
   scrollIntoView("#contact");
 });
-
-const home = document.querySelector(".home__container");
-const homeHeight = home.getBoundingClientRect().height;
+/*home opacity */
 
 document.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight; // 위로올라가면 1 밑으로 내려가면 0
 });
 
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-}
+/* show arrow up */
+arrowup.addEventListener("click", (event) => {
+  scrollIntoView("#home");
+});
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    //높이의 반정도내려왔을대
+    arrowup.classList.add("visible");
+  } else {
+    arrowup.classList.remove("visible");
+  }
+});
